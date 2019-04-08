@@ -10,7 +10,7 @@ namespace IntroductionToXamarinForms
         {
             InitializeComponent();
 
-            MainPage = new Exercise1();
+            MainPage = new NavigationPage(new MainPage());
             
         }
 
