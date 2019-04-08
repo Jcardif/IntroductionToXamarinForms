@@ -17,7 +17,7 @@ namespace IntroductionToXamarinForms
         public App(string databaseLocation)
         {
             InitializeComponent();
-            MainPage = new NavigationPage();
+            MainPage = new NavigationPage(new MainPage());
             DatabaseLocation = databaseLocation;
 
         }
