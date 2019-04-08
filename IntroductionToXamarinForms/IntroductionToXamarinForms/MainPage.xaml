@@ -13,8 +13,6 @@
                x:Name="passwordEntry"/>
         <Button x:Name="LogInBtn"
                 Clicked="LogInBtn_Clicked"
-                BackgroundColor="DodgerBlue"
-                TextColor="White"
                 Text="Log In"
                 Margin="0,50,0,0"/>
     </StackLayout>

@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IntroductionToXamarinForms.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primaryColor">#2196f3</Color>
+            <Color x:Key="btnTxtColor">#ffffff</Color>
 
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource  primaryColor}"/>
+                <Setter Property="TextColor"
+                        Value="{StaticResource btnTxtColor}"/>
+
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

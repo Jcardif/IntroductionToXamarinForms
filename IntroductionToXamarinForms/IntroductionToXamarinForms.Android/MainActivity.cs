@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Environment = System.Environment;
+using System.IO;
 
 namespace IntroductionToXamarinForms.Droid
 {
@@ -21,7 +23,12 @@ namespace IntroductionToXamarinForms.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+            string dbName = "travel_db.sqlite";
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string path = Path.Combine(folderPath, dbName);
+
+            LoadApplication(new App(path));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
